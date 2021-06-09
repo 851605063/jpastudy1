@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 @Data
 @Entity(name="t_user")
-public class user {
+public class User {
     @Id //唯一标识
     @GeneratedValue//唯一标识生成策略
     private Long id;
@@ -17,4 +17,14 @@ public class user {
     private String name;
     private String passwd;
     private String email;
+
+
+    public User() {
+    }
+
+    public User(Long id, String name, String passwd) {
+        this.id = id;
+        this.name = name;
+        this.passwd = passwd;
+    }
 }
